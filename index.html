@@ -1,191 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>W3.CSS Template</title>
+<title>Introduction to Computing Website</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
 </style>
-</head>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+  <div class="w3-bar w3-blue w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+ 
+   
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">Input Examples<i class="fa fa-caret-down"></i></button>     
+           <div class="w3-dropdown-content w3-bar-block w3-card-4">
+             <a href="add2numbers.html" class="w3-bar-item w3-button w3-hover-blue">Add 2 Numbers</a>
+             <a href="celsiustofahrenheit.html" class="w3-bar-item w3-button w3-hover-teal">Celsius to Fahrenheit</span></a>
+             <a href="gradecomputation.html" class="w3-bar-item w3-button w3-hover-red">Grade Computation</a>
+             <a href="computegrade.html" class="w3-bar-item w3-button w3-hover-green">Compute Grade</a>
+            <a href="incometaxcalculator.html" class="w3-bar-item w3-button w3-hover-purple">Income Tax Calculator</a>
+            <a href="feettometers.html" class="w3-bar-item w3-button w3-hover-orange">Feet to Meters</span></a>
+            <a href="meterstofeet.html" class="w3-bar-item w3-button w3-hover-dark-grey">Meters to Feet</span></a>
+      </div>
+    </div>
+
+   
+   
   </div>
 </div>
 
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
-    <i class="fa fa-remove"></i>
-  </a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-teal" href="#">INTRODUCTION TO COMPUTING</a>
-  <a class="w3-bar-item w3-button w3-hover-red" href="#">HTML</a>
-  <a class="w3-bar-item w3-button w3-hover-blue" href="#">CSS</a>
-  <a class="w3-bar-item w3-button w3-hover-orange" href="#">Javascript</a>
-</nav>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">The Course</a>
+</div>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px">
+   <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">CS 1130 - Introduction to Computing</h2>
+     <br>
+     <h2>
+     Soria's Assignments:  
+     </h2>
+      <br>
+      <h3>Add 2 Numbers</h3>
+      <h3>Celsius to Fahrenheit</h3>
+      <h3>Grade Computation</h3>
+      <h3>Compute Grade</h3>
+      <h3>Income Tax Calculator</h3>
+      <h3>Feet to Meters</h3>
+      <h3>Meters to Feet</h3>
 
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Introduction to Computing</h1>
-      <p>Hello, fellas I'm RJ Soria, and today, I'm gonna show you what is computing, why, and how is it important?</p>
-      <p>Computing is like having a super-smart friend who can do all sorts of things for you. They can help you with your work, your schoolwork, and even your hobbies. They can also help you connect with other people and learn new things.</p>
+      <br>
+      <h2></h2>
+      
+     
 
-<p>Why are computers so important? Well, think about it this way: if you need to write a paper for school, your computer friend can help you research your topic, write the essay, and even check for mistakes. Or, if you're planning a trip, your computer friend can help you book flights, find a hotel, and even make dinner reservations.</p>
 
-<p>How?</p>
-
-<p>Computers can do all sorts of cool stuff for us, from helping with work and school to making our lives easier and more fun. They're like having that super-smart friend who's always there for us, ready to help us out.</p>
-
-<p>So, what are you waiting for? Start exploring the world of computing today!</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
   </div>
 
-  <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-red">HTML</h1>
-      <p>Imagine you're building a house. HTML is like the bricks and mortar that make up the structure of your website. It defines the different elements on your page, like headings, paragraphs, images, and links. Without HTML, your website would be a jumble of text and images, with no clear organization or structure.</p>
-      <p>Think of it like this: if you want to write a letter to your friend, you need to use language to form sentences and paragraphs. Similarly, if you want to create a website, you need to use HTML to create the different elements that make up your page.</p>
-      <p>HTML is a relatively easy language to learn, and there are many resources available online to help you get started. Once you have a basic understanding of HTML, you can start to create your own web pages and applications.</p>
-      <p>Here are some of the key benefits of using HTML for front-end web development:</p>
-      <p>* It's like the building blocks of your website.</p>
-      <p>* It's easy to learn, even for beginners.</p>
-      <p>* It's versatile and can be used to create a wide variety of web pages.</p>
-      <p>* It's compatible with all major web browsers.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-blue">CSS</h1>
-      <p>Imagine you've built the structure of your website using HTML, but it's still bare-bones and unappealing. That's where CSS comes in. CSS, or Cascading Style Sheets, is like the paint and decorations that give your website its personality and style. It allows you to control the layout, fonts, colors, and other visual aspects of your web pages.</p>
-      <p>Think of it like this: if you've painted the walls of your room white, you can use CSS to add some color and personality. You can choose different colors for the text, buttons, and other elements on your page. You can also change the font, size, and weight of the text. And you can even add borders, shadows, and other effects to your elements</p>
-      <p>CSS is a more complex language than HTML, but it's still relatively easy to learn. There are many resources available online to help you get started with CSS. Once you have a basic understanding of CSS, you can start to create beautiful and stylish web pages.</p>
-      <p>Here are some of the key benefits of using CSS for front-end web development:</p>
-      <p>* It lets you style your HTML elements to create a visually appealing website.</p>
-      <p>* It's flexible and allows you to control every aspect of your website's appearance.</p>
-      <p>* It can be used to create responsive websites that adapt to different screen sizes.</p>
-      <p>* It's compatible with all major web browsers.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
   
-  <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-orange">Javascript</h1>
-      <p>Imagine you've built the structure and style of your website using HTML and CSS, but it's still static and unresponsive. That's where JavaScript comes in. JavaScript is like the lifeblood that brings your website to life. It allows you to create interactive elements, animations, and dynamic content.</p>
-      <p>Think of it like this: if you've built a house with all the necessary rooms and furniture, JavaScript is like the electricity that powers the lights, switches on the appliances, and allows people to move around freely. It's the language that makes your website responsive to user interactions and allows you to create dynamic experiences.</p>
-      <p>JavaScript is a more complex language than HTML or CSS, but it's still a very popular language for front-end web development. There are many resources available online to help you learn JavaScript. Once you have a basic understanding of JavaScript, you can start to create interactive and engaging websites.</p>
-      <p>Here are some of the key benefits of using Javascript for front-end web development:</p>
-      <p>* It brings your website to life by adding interactivity and dynamic content.</p>
-      <p>* It allows you to create user-friendly elements like forms, buttons, and menus.</p>
-      <p>* It enables you to manipulate the Document Object Model (DOM) to control the content and structure of your page.</p>
-      <p>* It supports asynchronous programming, allowing you to make requests to servers without blocking the user interface.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-  
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-red">Thank You!</h1>
-      <p></p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
-    </div>
-  </div>
-
-  <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
-    </div>
-
-    <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  </footer>
-
-<!-- END MAIN -->
+<!-- End Page Content -->
 </div>
 
 <script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
   }
 }
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
 
