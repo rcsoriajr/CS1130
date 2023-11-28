@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>My Awesome Web Space</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+
+        <h1>This Page Adds 2 Numbers</h1>
+        <br><br>
+        <label for="n1">Type the first number:</label>
+        <input id="n1" type="number" onkeyup="computesum()">
+        <br>
+        <label for="n2">Type the second number:</label>        
+        <input id="n2" type="number" onkeyup="computesum()">
+        <!--
+        <button onclick="computesum()">Compute Sum</button>
+        -->
+        <br>
+        <label for="sum">The sum is:</label>        
+        <input id="sum" type="number">
+        <br>
+
+        <!-- Load external JavaScript -->
+        <br><br>
+        <a href="index.html"><h4>Back To Home</h4>
+        <script>
+            function computesum()
+            {
+                var x1,x2,x3;
+
+                x1 = document.getElementById("n1").value*1;
+
+                x2 = document.getElementById("n2").value*1;
+
+                x3 = x2+x1;
+
+                document.getElementById("sum").value = x3;
+            }
+
+        </script>
+    </body>
+
+</html>
