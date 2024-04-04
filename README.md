@@ -1,2 +1,2 @@
-# CS1130
-CS 1130 Javascript Program
+# CS
+Computer Programming--2nd Sem--Pre-Final
