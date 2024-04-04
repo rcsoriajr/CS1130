@@ -1,0 +1,56 @@
+public abstract class BattleAction {
+    protected Character target;
+
+    public BattleAction(Character target) {
+        this.target = target;
+    }
+
+    public abstract void execute();
+}
+
+public class AttackAction extends BattleAction {
+    private int damage;
+
+    public AttackAction(Character target, int damage) {
+        super(target);
+        this.damage = damage;
+    }
+
+    public void execute() {
+        target.takeDamage(damage);
+    }
+}
+
+public class HealAction extends BattleAction {
+    private int healing;
+
+    public HealAction(Character target, int healing) {
+        super(target);
+        this.healing = healing;
+    }
+
+    public void execute() {
+        target.heal(healing); 
+    }
+}
+
+public class Battle {
+    private List<Character> characters;
+
+    public void runBattle() {
+        while (battleNotOver()) {
+            for (Character character : characters) {
+                BattleAction action = getActionFromPlayer(character);
+                action.execute();
+            }
+        }
+    }
+
+    private BattleAction getActionFromPlayer(Character character) {
+       ???
+    }
+
+    private boolean battleNotOver() {
+        ???
+    }
+}
