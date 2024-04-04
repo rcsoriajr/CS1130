@@ -1,0 +1,42 @@
+class Inventory {
+    protected int capacity;
+    protected List<Item> items;
+
+    public Inventory(int capacity) {
+        this.capacity = capacity;
+        this.items = new ArrayList<>();
+    }
+
+    public boolean addItem(Item item) {
+        if (items.size() < capacity) {
+            items.add(item);
+            System.out.println(item.name + " added to inventory.");
+            return true;
+        } else {
+            System.out.println("Inventory is full!");
+            return false;
+        }
+    }
+
+    public Item removeItem(String itemName) {
+        /* ??? */
+    }
+}
+
+class ChessPieceInventory extends Inventory {
+    private ChessPiece owner;
+
+    public ChessPieceInventory(ChessPiece owner, int capacity) {
+        super(capacity);
+        this.owner = owner;
+    }
+
+    public void useItem(String itemName) {
+        Item item = removeItem(itemName); 
+        if (item != null) {
+            item.use(owner); 
+        } else {
+            System.out.println("Item not found in inventory.");
+        }
+    }
+}
