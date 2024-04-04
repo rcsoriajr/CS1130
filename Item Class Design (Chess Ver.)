@@ -1,0 +1,28 @@
+class Item {
+    protected String name;
+    protected String description;
+
+    public Item(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public void use(ChessPiece piece) {
+        // ???
+    }
+}
+
+class Potion extends Item {
+    private int healthBoost;
+
+    public Potion(String name, String description, int healthBoost) {
+        super(name, description);
+        this.healthBoost = healthBoost;
+    }
+
+    @Override
+    public void use(ChessPiece piece) {
+        piece.health += this.healthBoost; 
+        System.out.println(piece.name + " used a potion and gained " + healthBoost + " health!");
+    }
+}
