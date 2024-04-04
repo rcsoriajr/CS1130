@@ -8,7 +8,7 @@ class Item {
     }
 
     public void use(ChessPiece piece) {
-        // ???
+        /* ??? */
     }
 }
 
