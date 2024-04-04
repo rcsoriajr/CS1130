@@ -1,0 +1,54 @@
+class ChessPiece {
+    String name;
+    int row, col;
+
+    ChessPiece(String name, int row, int col) {
+        this.name = name;
+        this.row = row;
+        this.col = col;
+    }
+
+        return false; 
+    }
+}
+
+class Pawn extends ChessPiece {
+    Pawn(String color, int row, int col) {
+        super(color + " Pawn", row, col);
+    }
+
+    @Override
+    boolean isValidMove(int newRow, int newCol) {
+        if (name.startsWith("White")) {
+        if (newRow == row - 1 && newCol == col && /* check if target square is empty */) {
+            return true;
+        }
+
+        if (row == 6 && newRow == 4 && newCol == col && /* check if both target squares are empty */) {
+            return true;
+        }
+
+        if (newRow == row - 1 && (newCol == col - 1 || newCol == col + 1) && /* check if target square has an opponent's piece */) {
+            return true;
+        }
+    } 
+
+    else {        
+        if (newRow == row + 1 && newCol == col && /* check if target square is empty */) {
+            return true;
+        }
+        
+        if (row == 1 && newRow == 3 && newCol == col && /* check if both target squares are empty */) {
+            return true;
+        }
+        
+        if (newRow == row + 1 && (newCol == col - 1 || newCol == col + 1) && /* check if target square has an opponent's piece */) {
+            return true;
+        }
+    }
+    return false; 
+    }
+}
+
+Pawn whitePawn = new Pawn("White", 6, 0);
+boolean validMove = whitePawn.isValidMove(5, 0); 
