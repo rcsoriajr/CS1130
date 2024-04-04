@@ -1,0 +1,29 @@
+abstract class Action {
+    protected ChessPiece performer;
+    protected ChessPiece target;
+
+    public Action(ChessPiece performer, ChessPiece target) {
+        this.performer = performer;
+        this.target = target;
+    }
+
+    public abstract void execute();
+}
+
+class AttackAction extends Action {
+
+    public AttackAction(ChessPiece attacker, ChessPiece defender) {
+        super(attacker, defender);
+    }
+
+    @Override
+    public void execute() {
+        int damage = performer.attack - target.defense;
+        if (damage > 0) {
+            target.health -= damage;
+            System.out.println(performer.name + " attacks " + target.name + " for " + damage + " damage!");
+        } else {
+            System.out.println(performer.name + "'s attack was ineffective!");
+        }
+    }
+}
