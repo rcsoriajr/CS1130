@@ -17,7 +17,7 @@ class Pawn extends ChessPiece {
 
     @Override
     public List<Square> getValidMoves(Square currentPosition) {
-        // ???
+        /* ??? */
     }
 }
 
@@ -28,7 +28,7 @@ class Knight extends ChessPiece {
 
     @Override
     public List<Square> getValidMoves(Square currentPosition) {
-        // ???
+        /* ??? */
     }
 }
 
