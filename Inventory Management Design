@@ -1,0 +1,58 @@
+public abstract class InventoryItem {
+    protected String name;
+
+    public InventoryItem(String name) {
+        this.name = name;
+    }
+}
+
+public class Equipment extends InventoryItem {
+    private int durability;
+    private int defense;
+
+    public Equipment(String name, int durability, int defense) {
+        super(name);
+        this.durability = durability;
+        this.defense = defense;
+    }
+
+    public void equip(Character character) {
+        ???
+    }
+}
+
+public class Consumable extends InventoryItem {
+    private int quantity;
+    private int healingValue;
+
+    public Consumable(String name, int quantity, int healingValue) {
+        super(name);
+        this.quantity = quantity;
+        this.healingValue = healingValue;
+    }
+
+    public void use(Character target) {
+        target.heal(healingValue); 
+        quantity--; 
+    }
+}
+
+public class Inventory {
+    private List<InventoryItem> items;
+    private int capacity;
+
+    public Inventory(int capacity) {
+        this.items = new ArrayList<>();
+        this.capacity = capacity;
+    }
+
+    public void addItem(InventoryItem item) {
+        if (items.size() < capacity) {
+            items.add(item);
+        }
+    }
+
+    public void removeItem(InventoryItem item) {
+        items.remove(item);
+    }
+}
