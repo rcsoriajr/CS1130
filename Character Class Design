@@ -1,0 +1,49 @@
+public class Character {
+    protected String name;
+    protected int health;
+    protected int strength;
+
+    public Character(String name, int health, int strength) {
+        this.name = name;
+        this.health = health;
+        this.strength = strength;
+    }
+
+    public void attack(Character target) {
+        int damage = strength; 
+        target.takeDamage(damage);
+    }
+
+    public void takeDamage(int damage) {
+        health -= damage;
+    }
+}
+
+public class Warrior extends Character {
+    private int armor;
+
+    public Warrior(String name, int health, int strength, int armor) {
+        super(name, health, strength);
+        this.armor = armor;
+    }
+
+    public void attack(Character target) {
+        int damage = strength + armor; 
+        target.takeDamage(damage);
+    }
+}
+
+public class Mage extends Character {
+    private int mana;
+
+    public Mage(String name, int health, int strength, int mana) {
+        super(name, health, strength);
+        this.mana = mana;
+    }
+
+    public void attack(Character target) {
+        int damage = 2 * strength - mana;
+        target.takeDamage(damage);
+        mana -= 10; 
+    }
+}
