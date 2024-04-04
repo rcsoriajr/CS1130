@@ -1,54 +1,34 @@
-class ChessPiece {
-    String name;
-    int row, col;
+abstract class ChessPiece {
+    protected String name;
+    protected int movementRange;
 
-    ChessPiece(String name, int row, int col) {
+    public ChessPiece(String name, int movementRange) {
         this.name = name;
-        this.row = row;
-        this.col = col;
+        this.movementRange = movementRange;
     }
 
-        return false; 
-    }
+    public abstract List<Square> getValidMoves(Square currentPosition); 
 }
 
 class Pawn extends ChessPiece {
-    Pawn(String color, int row, int col) {
-        super(color + " Pawn", row, col);
+    public Pawn(String color) {
+        super(color + " Pawn", 1); 
     }
 
     @Override
-    boolean isValidMove(int newRow, int newCol) {
-        if (name.startsWith("White")) {
-        if (newRow == row - 1 && newCol == col && /* check if target square is empty */) {
-            return true;
-        }
-
-        if (row == 6 && newRow == 4 && newCol == col && /* check if both target squares are empty */) {
-            return true;
-        }
-
-        if (newRow == row - 1 && (newCol == col - 1 || newCol == col + 1) && /* check if target square has an opponent's piece */) {
-            return true;
-        }
-    } 
-
-    else {        
-        if (newRow == row + 1 && newCol == col && /* check if target square is empty */) {
-            return true;
-        }
-        
-        if (row == 1 && newRow == 3 && newCol == col && /* check if both target squares are empty */) {
-            return true;
-        }
-        
-        if (newRow == row + 1 && (newCol == col - 1 || newCol == col + 1) && /* check if target square has an opponent's piece */) {
-            return true;
-        }
-    }
-    return false; 
+    public List<Square> getValidMoves(Square currentPosition) {
+        // ???
     }
 }
 
-Pawn whitePawn = new Pawn("White", 6, 0);
-boolean validMove = whitePawn.isValidMove(5, 0); 
+class Knight extends ChessPiece {
+    public Knight(String color) {
+        super(color + " Knight", 2); 
+    }
+
+    @Override
+    public List<Square> getValidMoves(Square currentPosition) {
+        // ???
+    }
+}
+
